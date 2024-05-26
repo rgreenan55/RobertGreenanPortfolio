@@ -6,8 +6,9 @@ const Header = () => {
     return (
         <Box flexGrow={1}>
             <AppBar position='fixed'>
-                <Container maxWidth='xl'>
+                <Container maxWidth={false} sx={{ maxWidth: '75%' }}>
                 <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
+                    
                     {/* Icon? */}
                     <Box display='flex'>
                         <Avatar src={logo} sx={{ mr: '16px' }}/>
@@ -24,6 +25,7 @@ const Header = () => {
                             <LinkedIn sx={{ color: 'black', opacity: 0.75 }} />
                         </IconButton>
                     </Box>
+            
                 </Toolbar>
                 </Container>
             </AppBar>
