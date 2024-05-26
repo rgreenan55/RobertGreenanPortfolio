@@ -1,4 +1,4 @@
-import { Box, Card, CardContent, CardMedia, Container, Grid, Typography } from "@mui/material"
+import { Card, CardContent, CardMedia, Container, Grid, Typography } from "@mui/material"
 import Header from "./layouts/Header"
 
 import image from './assets/profile_photo.jpg';
