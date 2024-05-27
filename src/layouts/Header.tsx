@@ -4,12 +4,12 @@ import logo from '../../public/favicon/android-chrome-512x512.png';
 
 const Header = () => {
     return (
-        <Box flexGrow={1}>
+        <Box flexGrow={1} sx={{ mb: '80px' }}>
             <AppBar position='fixed'>
-                <Container maxWidth={false} sx={{ maxWidth: '75%' }}>
+                <Container disableGutters maxWidth={false} sx={{ maxWidth: '75%' }}>
                 <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
                     
-                    {/* Icon? */}
+                    {/* Icon + Name */}
                     <Box display='flex'>
                         <Avatar src={logo} sx={{ mr: '16px' }}/>
                         <Typography variant='h5' lineHeight={1.65}> Robert Greenan </Typography>

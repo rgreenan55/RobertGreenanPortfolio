@@ -1,19 +1,21 @@
-import { Container, Grid, Stack } from "@mui/material"
+import { Container, Stack } from "@mui/material"
 import Header from "./layouts/Header"
-import Introduction from "./sections/Introduction"
+import {
+    Introduction,
+    Projects,
+    Work
+} from "./sections"
 
 const App = () => {
   return (
-    <>
+    <Container disableGutters maxWidth={false}>
         <Header />
-        <Container maxWidth={false} sx={{ maxWidth: '75%' }}>
-        <Grid mt={'80px'}>
-            <Stack spacing='10vh'>
-                <Introduction />
-            </Stack>
-        </Grid>
-        </Container>
-    </>
+        <Stack alignItems='center'>
+            <Introduction />
+            <Projects />
+            <Work />
+        </Stack>
+    </Container>
   )
 }
 
