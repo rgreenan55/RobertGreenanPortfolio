@@ -5,7 +5,7 @@ import SectionContainer from "../components/SectionContainer";
 const Introduction = () => {
     return (
         <SectionContainer disableTopMargin height='80vh' maxHeight='740px'>
-            <Card elevation={10} sx={{ display: 'flex', justifyContent: 'space-between', height: '100%' }}>
+            <Card sx={{ display: 'flex', justifyContent: 'space-between', height: '100%' }}>
 
                 <CardContent sx={{ alignContent: 'center', p: '32px', width: '50%'}}>
                     <Typography variant='h4' fontWeight='bold'>

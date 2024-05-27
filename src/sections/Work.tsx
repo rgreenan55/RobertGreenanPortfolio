@@ -1,15 +1,14 @@
-import { Card, Stack } from "@mui/material"
+import { Stack } from "@mui/material"
 import SectionContainer from "../components/SectionContainer";
+import WorkCard from "../components/WorkCard";
 
 const Work = () => {
     return (
-        <SectionContainer height='80vh' maxHeight='740px'>
-            <Stack direction='row' width='100%'>
-                <Card> Hey </Card>
-                <Card> Hey </Card>
-                <Card> Hey </Card>
-                <Card> Hey </Card>
-                <Card> Hey </Card>
+        <SectionContainer headerTitle='Work Experience' height={{ xs: '180vh', lg: '60vh' }}>
+            <Stack spacing="2vw" direction={{ xs: 'column', lg: 'row' }} sx={{ height: '100%' }}>
+                <WorkCard />
+                <WorkCard />
+                <WorkCard />
             </Stack>
         </SectionContainer>
     )

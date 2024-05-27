@@ -4,6 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <style>
+        ::-webkit-scrollbar
+        {
+          width: 8px;  /* for vertical scrollbars */
+          height: 8px; /* for horizontal scrollbars */
+        }
+        
+        ::-webkit-scrollbar-track
+        {
+          background: rgba(0, 0, 0, 0.25);
+        }
+        
+        ::-webkit-scrollbar-thumb
+        {
+          background: rgba(0, 0, 0, 0.5);
+        }
+    </style>
+
     <!-- Import Custom Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +30,7 @@
     <link rel="icon" type="image/svg+xml" href="/favicon/favicon.ico" />
     <title>Robert Greenan</title>
   </head>
-  <body style="margin: 0">
+  <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

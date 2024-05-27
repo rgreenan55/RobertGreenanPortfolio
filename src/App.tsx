@@ -2,6 +2,7 @@ import { Container, Stack } from "@mui/material"
 import Header from "./layouts/Header"
 import {
     Introduction,
+    Personal,
     Projects,
     Work
 } from "./sections"
@@ -14,7 +15,9 @@ const App = () => {
             <Introduction />
             <Projects />
             <Work />
+            <Personal />
         </Stack>
+        {/* Footer? */}
     </Container>
   )
 }
