@@ -1,5 +1,4 @@
 import { Box, Container, Typography } from "@mui/material"
-import backgroundImage from '../assets/background/backgroundShape.png';
 
 type Props = {
     children : React.ReactNode,
@@ -10,7 +9,7 @@ type Props = {
     backgroundShape ?: boolean
 }
 
-const SectionContainer = ({children, disableTopMargin, headerTitle, height, maxHeight, backgroundShape } : Props) => {
+const SectionContainer = ({children, disableTopMargin, headerTitle, height, maxHeight } : Props) => {
     return (
         <Box position='relative' sx={{ width: '100%' }}>
 

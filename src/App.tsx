@@ -2,8 +2,8 @@ import { Container, Stack } from "@mui/material"
 import Header from "./layouts/Header"
 import {
     Introduction,
-    Personal,
-    Projects,
+    //Personal,
+    //Projects,
     Work
 } from "./sections"
 
