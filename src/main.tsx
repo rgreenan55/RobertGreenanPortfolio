@@ -4,13 +4,20 @@ import App from './App.tsx'
 import { createTheme, ThemeProvider } from '@mui/material'
 
 const theme = createTheme ({
-    typography: {
-        fontFamily: '"Inter"',
-    },
     palette: {
         primary: { main: '#ffffff' },
         secondary: { main: '#673ab7' },
     },
+    typography: {
+        fontFamily: '"Inter"',
+    },
+    components: {
+        MuiCard: {
+            defaultProps: {
+                elevation: 10,
+            },
+        }
+    }
 });
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

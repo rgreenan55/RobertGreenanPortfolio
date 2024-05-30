@@ -2,6 +2,7 @@ import { Container, Stack } from "@mui/material"
 import Header from "./layouts/Header"
 import {
     Introduction,
+    Personal,
     Projects,
     Work
 } from "./sections"
@@ -12,9 +13,9 @@ const App = () => {
         <Header />
         <Stack alignItems='center'>
             <Introduction />
-            <Projects />
             <Work />
         </Stack>
+        {/* Footer? */}
     </Container>
   )
 }
