@@ -13,9 +13,7 @@ const App = () => {
         <Header />
         <Stack alignItems='center'>
             <Introduction />
-            <Projects />
             <Work />
-            <Personal />
         </Stack>
         {/* Footer? */}
     </Container>

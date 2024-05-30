@@ -19,8 +19,8 @@ const Introduction = () => {
                 </CardContent>
 
                 <CardMedia image={image} sx={{ width: '40%', height: '100%' }} />
-                
             </Card>
+
         </SectionContainer>
     )
 }
