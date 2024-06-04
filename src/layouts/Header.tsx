@@ -1,6 +1,6 @@
 import { GitHub, LinkedIn } from "@mui/icons-material";
 import { AppBar, Avatar, Box, Container, IconButton, Toolbar, Typography } from "@mui/material";
-import logo from '../../public/favicon/android-chrome-512x512.png';
+import logo from '../assets/images/logo.png';
 
 const Header = () => {
     return (

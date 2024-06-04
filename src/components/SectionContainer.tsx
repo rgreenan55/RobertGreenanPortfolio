@@ -1,4 +1,6 @@
-import { Box, Container, Typography } from "@mui/material"
+import { Box, Button, Container, Typography } from "@mui/material"
+import { FileOpen } from "@mui/icons-material"
+import ResumePDF from '../assets/documents/Robert_Greenan_Resume.pdf';
 
 type Props = {
     children : React.ReactNode,
@@ -21,7 +23,18 @@ const SectionContainer = ({children, disableTopMargin, headerTitle, height, maxH
 
             {/* Content of Section */}
             <Container disableGutters maxWidth={false} sx={{ mt: disableTopMargin?'0':'5vh', mb: '10vh', maxWidth: '75%', height: 'auto' }}>
-                {headerTitle && <Typography variant='h4' sx={{ mb: '16px', textDecoration: 'underline' }}> {headerTitle} </Typography>}
+                {headerTitle && (
+                    <Box display='flex' sx={{ mb: '16px', justifyContent: 'space-between' }}>
+                        <Typography variant='h4' sx={{ textDecoration: 'underline' }}>
+                            {headerTitle}
+                        </Typography>
+
+                        <Button variant='contained' size='large' startIcon={<FileOpen />} sx={{ boxShadow: 3 }} onClick={() => window.open(ResumePDF, '_blank')}>
+                            View Full Resume
+                        </Button>
+                    </Box>
+                )}
+
                 <Box sx={{ height, maxHeight }}>
                     {children}
                 </Box>
