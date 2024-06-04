@@ -2,6 +2,9 @@ import { Box, Button, Container, Typography } from "@mui/material"
 import { FileOpen } from "@mui/icons-material"
 import ResumePDF from '../assets/documents/Robert_Greenan_Resume.pdf';
 
+// Resolves Deployment URL
+const ResumeURL = new URL(ResumePDF, import.meta.url).href
+
 type Props = {
     children : React.ReactNode,
     disableTopMargin ?: boolean,
@@ -29,7 +32,7 @@ const SectionContainer = ({children, disableTopMargin, headerTitle, height, maxH
                             {headerTitle}
                         </Typography>
 
-                        <Button variant='contained' size='large' startIcon={<FileOpen />} sx={{ boxShadow: 3 }} onClick={() => window.open(ResumePDF, '_blank')}>
+                        <Button variant='contained' size='large' startIcon={<FileOpen />} sx={{ boxShadow: 3 }} onClick={() => window.open(ResumeURL, '_blank')}>
                             View Full Resume
                         </Button>
                     </Box>
