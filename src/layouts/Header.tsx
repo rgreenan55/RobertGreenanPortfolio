@@ -49,7 +49,7 @@ const Header = () => {
     return (
         <Box flexGrow={1} sx={{ mb: '80px' }}>
             <AppBar position='fixed'>
-                <Container disableGutters maxWidth={false} sx={{ maxWidth: '75%' }}>
+                <Container disableGutters maxWidth={false} sx={{ maxWidth: { xs: '90%', 'md': '75%' }}}>
                 <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
                     
                     {/* Icon + Name */}
