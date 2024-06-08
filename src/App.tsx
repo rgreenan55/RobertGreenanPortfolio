@@ -1,4 +1,6 @@
-import { Container, Stack } from "@mui/material"
+import { Container, CssBaseline, Stack } from "@mui/material"
+import { ThemeHandler } from './Themes';
+
 import Header from "./layouts/Header"
 import {
     Introduction,
@@ -7,17 +9,23 @@ import {
     Work
 } from "./sections"
 
+
 const App = () => {
-  return (
-    <Container disableGutters maxWidth={false}>
-        <Header />
-        <Stack alignItems='center'>
-            <Introduction />
-            <Work />
-        </Stack>
-        {/* Footer? */}
-    </Container>
-  )
+
+
+    return (
+        <ThemeHandler>
+            <CssBaseline />
+            <Container disableGutters maxWidth={false}>
+                <Header />
+                <Stack alignItems='center'>
+                    <Introduction />
+                    <Work />
+                </Stack>
+                {/* Footer? */}
+            </Container>
+        </ThemeHandler>
+    )
 }
 
 export default App
