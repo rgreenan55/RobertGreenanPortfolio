@@ -2,8 +2,8 @@ import React from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { AppBar, Avatar, Box, Container, IconButton, Toolbar, Tooltip, Typography, useTheme } from "@mui/material";
 import { GitHub, LightMode, LinkedIn, NightsStay as DarkMode, SentimentVerySatisfied, SentimentSatisfied, SentimentNeutral, SentimentDissatisfied, SentimentVeryDissatisfied } from "@mui/icons-material";
-import logo from '../assets/images/logo.png';
 import { ThemeContext } from '../Themes';
+import Logo from '../assets/images/logo.png';
 
 const moodIcons = [
     { text: '', icon: <SentimentVerySatisfied /> },
@@ -54,7 +54,7 @@ const Header = () => {
                     
                     {/* Icon + Name */}
                     <Box display='flex'>
-                        <Avatar src={logo} sx={{ mr: '16px', boxShadow: '0px 0px 15px' }}/>
+                        <Avatar src={Logo} sx={{ mr: '16px', boxShadow: '0px 0px 15px' }}/>
                         <Typography variant='h5' lineHeight={1.65}> Robert Greenan </Typography>
                     </Box>
 

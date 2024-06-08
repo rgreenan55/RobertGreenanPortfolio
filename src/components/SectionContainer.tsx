@@ -25,7 +25,7 @@ const SectionContainer = ({children, disableTopMargin, headerTitle, height, maxH
 
 
             {/* Content of Section */}
-            <Container disableGutters maxWidth={false} sx={{ mt: disableTopMargin?'0':'5vh', mb: '10vh', maxWidth: '75%', height: 'auto' }}>
+            <Container disableGutters maxWidth={false} sx={{ mt: disableTopMargin?'0':'5vh', mb: '10vh', maxWidth: { xs: '90%', 'md': '75%' } , height: 'auto' }}>
                 {headerTitle && (
                     <Box display='flex' sx={{ mb: '16px', justifyContent: 'space-between' }}>
                         <Typography variant='h4' sx={{ textDecoration: 'underline' }}>
