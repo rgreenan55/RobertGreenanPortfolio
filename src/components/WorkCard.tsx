@@ -39,7 +39,7 @@ const WorkCard = ({ companyName, jobTitle, workPeriod, description, companyLink 
                 <Divider sx={{ borderColor: 'black' }} />
             </CardContent>
             <CardContent sx={{ pt: 0, flexGrow: 1, overflowY: 'auto' }}>
-                <Typography whiteSpace='preserve-breaks' fontSize='16px' align='justify'>
+                <Typography whiteSpace='preserve-breaks' fontSize='20px' align='justify'>
                     {description.trim()}
                 </Typography>
             </CardContent>

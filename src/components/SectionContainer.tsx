@@ -1,43 +1,21 @@
-import { Box, Button, Container, Typography } from "@mui/material"
-import { FileOpen } from "@mui/icons-material"
-import ResumePDF from '../assets/documents/Robert_Greenan_Resume.pdf';
-
-// Resolves Deployment URL
-const ResumeURL = new URL(ResumePDF, import.meta.url).href
+import { Box, Container } from "@mui/material"
 
 type Props = {
     children : React.ReactNode,
     disableTopMargin ?: boolean,
-    headerTitle ?: string,
+    sectionHeader ?: React.ReactNode,
     height ?: string | any,
     maxHeight ?: string | any,
     backgroundShape ?: boolean
 }
 
-const SectionContainer = ({children, disableTopMargin, headerTitle, height, maxHeight } : Props) => {
+const SectionContainer = ({children, disableTopMargin, sectionHeader, height, maxHeight } : Props) => {
     return (
         <Box position='relative' sx={{ width: '100%' }}>
 
-            {/* 
-            {backgroundShape &&
-                <Box position='absolute' sx={{ height: '100%', width: '100%', zIndex: '-1', backgroundImage: 'linear-gradient(180deg, rgb(0,0,0,0) 12%, #22313F 12% 95%, rgb(0,0,0,0) 95%)' }} />
-            } */}
-
-
             {/* Content of Section */}
             <Container disableGutters maxWidth={false} sx={{ mt: disableTopMargin?'0':'5vh', mb: '10vh', maxWidth: { xs: '90%', 'md': '75%' } , height: 'auto' }}>
-                {headerTitle && (
-                    <Box display='flex' sx={{ mb: '16px', justifyContent: 'space-between' }}>
-                        <Typography variant='h4' sx={{ textDecoration: 'underline' }}>
-                            {headerTitle}
-                        </Typography>
-
-                        <Button variant='contained' size='large' startIcon={<FileOpen />} sx={{ boxShadow: 3 }} onClick={() => window.open(ResumeURL, '_blank')}>
-                            View Full Resume
-                        </Button>
-                    </Box>
-                )}
-
+                {sectionHeader}
                 <Box sx={{ height, maxHeight }}>
                     {children}
                 </Box>

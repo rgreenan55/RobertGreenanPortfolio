@@ -8,11 +8,10 @@ import {
     //Projects,
     Work
 } from "./sections"
+import Skills from "./sections/Skills";
 
 
 const App = () => {
-
-
     return (
         <ThemeHandler>
             <CssBaseline />
@@ -21,6 +20,7 @@ const App = () => {
                 <Stack alignItems='center'>
                     <Introduction />
                     <Work />
+                    <Skills />
                 </Stack>
                 {/* Footer? */}
             </Container>
