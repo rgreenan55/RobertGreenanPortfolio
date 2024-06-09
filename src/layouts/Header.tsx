@@ -9,10 +9,10 @@ const moodIcons = [
     { text: '', icon: <SentimentVerySatisfied /> },
     { text: 'Hey there!', icon: <SentimentVerySatisfied /> },
     { text: 'Hey, again!', icon: <SentimentVerySatisfied /> },
-    { text: 'Ouch', icon: <SentimentSatisfied /> },
-    { text: 'That kinda hurts you know', icon: <SentimentNeutral /> },
-    { text: 'Knock it off you would?', icon: <SentimentDissatisfied /> },
-    { text: 'Seriously, stop it', icon: <SentimentDissatisfied /> },
+    { text: 'Ouch!', icon: <SentimentSatisfied /> },
+    { text: 'That kinda hurts you know.', icon: <SentimentNeutral /> },
+    { text: 'Knock it off would you?', icon: <SentimentDissatisfied /> },
+    { text: 'Seriously, stop it...', icon: <SentimentDissatisfied /> },
     { text: '...', icon: <SentimentVeryDissatisfied /> }
 ]
 
