@@ -1,15 +1,13 @@
 import { Container, CssBaseline, Stack } from "@mui/material"
 import { ThemeHandler } from './Themes';
-
 import Header from "./layouts/Header"
 import {
     Introduction,
-    //Personal,
+    Work,
+    Skills,
     //Projects,
-    Work
+    //Personal,
 } from "./sections"
-import Skills from "./sections/Skills";
-
 
 const App = () => {
     return (

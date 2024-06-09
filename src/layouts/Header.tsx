@@ -77,7 +77,7 @@ const Header = () => {
                                             exit={{ opacity: 0 }}
                                             disabled={showMood}
                                             onClick={handleMoodTooltip}
-                                            sx={{ ':first-child': { color: darkMode ? 'white' : '#171717' }}}
+                                            sx={{ ':first-of-type': { color: darkMode ? 'white' : '#171717' }}}
                                         >
                                             <Tooltip open={showMood} title={moodIcons[moodIndex].text} arrow>
                                                 {moodIcons[moodIndex].icon}
