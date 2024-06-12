@@ -3,7 +3,7 @@ import React from "react";
 
 const lightTheme = createTheme({
     palette: {
-        primary: { main: '#ffffff' },
+        primary: { main: '#ffffff', contrastText: '#171717' },
         secondary: { main: '#673ab7' },
     },
     typography: {
@@ -13,19 +13,26 @@ const lightTheme = createTheme({
         MuiCard: {
             defaultProps: {
                 elevation: 10,
+                sx: { border: '1px solid #ffffff' },
             },
         },
         MuiPaper: {
             defaultProps: {
+                elevation: 10,
                 sx: { border: '1px solid #ffffff' },
             }
         },
+        MuiIconButton: {
+            defaultProps: { 
+                sx: { '> *': { color: '#171717' }}
+            }
+        }
     }
 });
 
 const darkTheme = createTheme({
     palette: {
-        primary: { main: '#171717' },
+        primary: { main: '#171717', contrastText: '#ffffff' },
         secondary: { main: '#a793cc' },
         error: { main: '#e57373' },
         background: {
@@ -41,14 +48,22 @@ const darkTheme = createTheme({
         MuiCard: {
             defaultProps: {
                 elevation: 10,
+                sx: { border: '1px solid #383838' },
             },
         },
         MuiPaper: {
             defaultProps: {
+                elevation: 10,
                 sx: { border: '1px solid #383838' },
             }
         },
-    }
+        MuiIconButton: {
+            defaultProps: { 
+                sx: { '> *': { color: '#ffffff' }}
+            }
+        },
+        
+    },
 })
 
 

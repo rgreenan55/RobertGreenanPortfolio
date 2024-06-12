@@ -77,7 +77,6 @@ const Header = () => {
                                             exit={{ opacity: 0 }}
                                             disabled={showMood}
                                             onClick={handleMoodTooltip}
-                                            sx={{ ':first-of-type': { color: darkMode ? 'white' : '#171717' }}}
                                         >
                                             <Tooltip open={showMood} title={moodIcons[moodIndex].text} arrow>
                                                 {moodIcons[moodIndex].icon}
@@ -89,12 +88,12 @@ const Header = () => {
                         </AnimatePresence>
 
                         {/* Links */}
-                        <IconButton onClick={() => window.open('https://github.com/rgreenan55', '_blank')} sx={{ borderRadius: '0' }}>
-                            <GitHub sx={{ color: darkMode ? 'white' : '#171717' }} />
+                        <IconButton onClick={() => window.open('https://github.com/rgreenan55', '_blank')} style={{ borderRadius: '0' }}>
+                            <GitHub />
                         </IconButton>
 
-                        <IconButton onClick={() => window.open('https://www.linkedin.com/in/robert-greenan/', '_blank')} sx={{ borderRadius: '0' }}>
-                            <LinkedIn sx={{ color: darkMode ? 'white' : '#171717' }} />
+                        <IconButton onClick={() => window.open('https://www.linkedin.com/in/robert-greenan/', '_blank')} style={{ borderRadius: '0' }}>
+                            <LinkedIn />
                         </IconButton>
 
                         {/* Theme Mode Button */}
@@ -106,12 +105,8 @@ const Header = () => {
                                 onClick={handleLightDarkModeToggle}
                                 sx={{ backgroundColor: theme.palette.primary.main }}
                             >
-                            <IconButton sx={{ borderRadius: '0' }}>
-                                {darkMode ?
-                                    <DarkMode sx={{ color: darkMode ? 'white' : '#171717' }} />
-                                    : 
-                                    <LightMode sx={{ color: darkMode ? 'white' : '#171717' }} />
-                                }
+                            <IconButton style={{ borderRadius: '0' }}>
+                                {darkMode ? <DarkMode /> : <LightMode />}
                             </IconButton>
                             </Box>
                         </Box>
