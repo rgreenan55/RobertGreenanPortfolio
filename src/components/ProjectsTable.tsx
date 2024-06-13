@@ -24,10 +24,7 @@ const DetailsButton = (params : GridRenderCellParams) => {
 }
 
 const LinkButton = (params : GridRenderCellParams) => {
-    const onClick = () => {
-        if (params.value) window.open(params.value, '_blank')
-    }
-
+    const onClick = () => { if (params.value) window.open(params.value, '_blank') }
     return (
         <IconButton onClick={onClick} disabled={!params.value} style={{ width: '100%', height: '100%', borderRadius: 0 }}>
             {params.value ? <GitHub /> : <LinkOff />}
@@ -52,7 +49,7 @@ const ProjectsTable = ({ value, headers = defaultHeaders, rows = [] } : Props) =
                     '& .MuiDataGrid-cell[data-field="details"]': { padding: 0 },            // Remove Padding from Button Cell
                     '& .MuiDataGrid-cell[data-field="link"]': { padding: 0 },
                     '& .MuiDataGrid-cell:focus-within': { outline: 'none !important' },     // Removes Border Hover Color (was same as background)
-                    '& .MuiDataGrid-columnSeparator': { display: 'none' },
+                    '& .MuiDataGrid-columnSeparator': { display: 'none' },                  // Removes Column Seperator
                 }}
             />
         </TabPanel>
@@ -61,6 +58,7 @@ const ProjectsTable = ({ value, headers = defaultHeaders, rows = [] } : Props) =
 
 export default ProjectsTable;
 
+// Headers
 const defaultHeaders : GridColDef<any>[] = [
     { field: 'projectName', headerName: 'Project Name', flex: 5 },
     { field: 'contribution', headerName: 'Contribution', flex: 5, },

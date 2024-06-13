@@ -4,7 +4,7 @@ import React from "react";
 const lightTheme = createTheme({
     palette: {
         primary: { main: '#ffffff', contrastText: '#171717' },
-        secondary: { main: '#673ab7' },
+        secondary: { main: '#6030b0' },
     },
     typography: {
         fontFamily: '"Inter"',
@@ -36,7 +36,7 @@ const darkTheme = createTheme({
         secondary: { main: '#a793cc' },
         error: { main: '#e57373' },
         background: {
-            default: '#383838',
+            default: '#101010',
             paper: '#171717',
         },
         text: { primary: '#fdfdfd' },
