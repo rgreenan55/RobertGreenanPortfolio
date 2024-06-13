@@ -61,30 +61,25 @@ const darkTheme = createTheme({
             defaultProps: { 
                 sx: { '> *': { color: '#ffffff' }}
             }
-        },
-        
+        },        
     },
 })
 
 
-const getThemeByName = (theme : string) => {
-    return ThemeMap[theme];
-}
-
-const ThemeMap: { [key : string] : any } = { 
-    lightTheme, darkTheme
-}
-
+// Theme Stuff
+const getThemeByName = (theme : string) => ThemeMap[theme];
+const ThemeMap: { [key : string] : any } = { lightTheme, darkTheme }
 export const ThemeContext = React.createContext(getThemeByName('darkTheme'));
 
-export const ThemeHandler = (props : any) => {
+type ThemeProps = { children : React.ReactNode }
+export const ThemeHandler = ({ children } : ThemeProps) => {
     const [themeName, setThemeName] = React.useState('darkTheme');
     const theme = getThemeByName(themeName);
 
     return (
         <ThemeContext.Provider value={setThemeName}>
             <ThemeProvider theme={theme}>
-                {props.children}
+                {children}
             </ThemeProvider>
         </ThemeContext.Provider>
     )

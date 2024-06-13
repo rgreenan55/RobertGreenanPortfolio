@@ -5,20 +5,19 @@ import { GitHub, LinkOff } from '@mui/icons-material';
 
 type Props = {
     value : string,
-    headers ?: GridColDef<any>[],
     rows : any,
 }
 
-const DetailsButton = (params : GridRenderCellParams) => {
-    console.log(params.value);
-
+const DetailsButton = (detailsLink : string) => {
     return (
         <Button
             variant='text'
             color='secondary'
-            sx={{ width: '100%', height: '100%' }}
+            disabled={!detailsLink}
+            sx={{ width: '100%', height: '100%', '&:disabled' : { color: 'grey' } }}
+            onClick={() => window.open(detailsLink, '_blank')}
         >
-            W.I.P {/* Details */}
+            {detailsLink ? 'Details' : '--'}
         </Button>
     )
 }
@@ -32,7 +31,7 @@ const LinkButton = (params : GridRenderCellParams) => {
     )
 }
 
-const ProjectsTable = ({ value, headers = defaultHeaders, rows = [] } : Props) => {
+const ProjectsTable = ({ value, rows = [] } : Props) => {
     return (
         <TabPanel value={value} sx={{ px: 0, height: 'calc(100% - 48px)'}}>
             <DataGrid
@@ -59,10 +58,11 @@ const ProjectsTable = ({ value, headers = defaultHeaders, rows = [] } : Props) =
 export default ProjectsTable;
 
 // Headers
-const defaultHeaders : GridColDef<any>[] = [
+const headers : GridColDef<any>[] = [
     { field: 'projectName', headerName: 'Project Name', flex: 5 },
     { field: 'contribution', headerName: 'Contribution', flex: 5, },
     { field: 'date', headerName: 'Start Date', flex: 2, headerAlign: 'center', align: 'center' },
     { field: 'link', headerName: 'Link', flex: 1, headerAlign: 'center', align: 'center', renderCell: LinkButton },
-    { field: 'details', headerName: 'Details', flex: 2, headerAlign: 'center', align: 'center', renderCell: DetailsButton},
+    { field: 'details', headerName: 'Details', flex: 2, headerAlign: 'center', align: 'center', renderCell: (params) => DetailsButton(params.value)},
 ]
+

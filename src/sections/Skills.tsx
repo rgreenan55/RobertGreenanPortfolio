@@ -11,13 +11,16 @@ const Skills = () => {
             <Stack spacing="2vw" sx={{ height: 'auto', maxHeight: '100%' }}>
                 <Paper sx={{ p: '16px' }}>
                     <Stack spacing={2}>
+
                         {skill_data.map(data => (
                             <Box key={data.title}>
+
                                 <Typography variant='h6' sx={{ mx: '8px' }}> {data.title} </Typography>
+
                                 <Box>
                                     {data.skills.map(skill => {
                                         const HoverPlayer = new Audio(HoverAudio);
-                                        HoverPlayer.volume = 0.25;
+                                        HoverPlayer.volume = 0.75;
 
                                         return (
                                             <Button
@@ -30,7 +33,7 @@ const Skills = () => {
                                                 variant='contained'
                                                 color='secondary'
                                                 disableRipple
-                                                onMouseEnter={() => HoverPlayer.play()}
+                                                onMouseEnter={() => HoverPlayer.play().catch(() => {})}
                                                 sx={{ m: '8px', textTransform: 'none' }}
                                             >
                                                 {skill}
@@ -38,8 +41,10 @@ const Skills = () => {
                                         )
                                     })}
                                 </Box>
+
                             </Box>
                         ))}
+                        
                     </Stack>
                 </Paper>
 
