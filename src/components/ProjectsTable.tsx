@@ -1,7 +1,7 @@
 import { Button, IconButton } from '@mui/material';
-import { TabPanel } from '@mui/lab';
-import { DataGrid, GridColDef, GridRenderCellParams } from '@mui/x-data-grid';
 import { GitHub, LinkOff } from '@mui/icons-material';
+import { DataGrid, GridColDef, GridRenderCellParams } from '@mui/x-data-grid';
+import { TabPanel } from '@mui/lab';
 
 type Props = {
     value : string,
@@ -15,7 +15,6 @@ const DetailsButton = (detailsLink : string) => {
             color='secondary'
             disabled={!detailsLink}
             sx={{ width: '100%', height: '100%', '&:disabled' : { color: 'grey' } }}
-            onClick={() => window.open(detailsLink, '_blank')}
         >
             {detailsLink ? 'Details' : '--'}
         </Button>
@@ -55,8 +54,6 @@ const ProjectsTable = ({ value, rows = [] } : Props) => {
     )
 }
 
-export default ProjectsTable;
-
 // Headers
 const headers : GridColDef<any>[] = [
     { field: 'projectName', headerName: 'Project Name', flex: 5 },
@@ -66,3 +63,4 @@ const headers : GridColDef<any>[] = [
     { field: 'details', headerName: 'Details', flex: 2, headerAlign: 'center', align: 'center', renderCell: (params) => DetailsButton(params.value)},
 ]
 
+export default ProjectsTable;

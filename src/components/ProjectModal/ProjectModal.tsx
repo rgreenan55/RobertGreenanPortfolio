@@ -1,30 +1,29 @@
-// import { Box, Modal, useTheme } from "@mui/material";
+// import { Box, Modal } from "@mui/material";
+// import GameModal from "./GameModal";
+// import WebModal from "./WebModal";
 
 // type Props = {
 //     open : boolean,
 //     onClose : any,              // TODO: figure this out
-//     modalContent ?: React.ReactNode
+//     modalDetails ?: any
 // }
 
-// const ProjectModal = ({ open, onClose, modalContent } : Props) => {
-//     const theme = useTheme();
-
-//     const createLink = (defaultUrl : string) => {
-//         return defaultUrl + '?&bg_color=' + theme.palette.background.paper.replace('#', '') + '&fg_color=' + theme.palette.primary.contrastText.replace('#', '') + '&border_color=' + theme.palette.primary.contrastText.replace('#', '')
+// const ProjectModal = ({ open, onClose, modalDetails } : Props) => {
+//     const getModalContent = (modalDetails : any) => {
+//         switch(modalDetails.details.type) {
+//             case 'web':
+//                 return <WebModal appDetails={modalDetails} />
+//             case 'game':
+//                 return <GameModal gameDetails={modalDetails} />
+//             default:
+//                 return <></>
+//         }
 //     }
 
 //     return (
 //         <Modal open={open} onClose={onClose}>
 //             <Box sx={modalStyle}>
-//                 {modalContent}
-//                 <iframe
-//                     frameBorder={0}
-//                     src={createLink('https://itch.io/embed/2770058')}
-//                     width="550"
-//                     height="165"
-//                 >
-//                     <a href="https://boebi-g.itch.io/pong"> Pong by Boebi_G </a>
-//                 </iframe>
+//                 {modalDetails ?? getModalContent(modalDetails)}
 //             </Box>
 //         </Modal>
 //     )
