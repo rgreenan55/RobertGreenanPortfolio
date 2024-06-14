@@ -5,7 +5,7 @@ import {
     Introduction,
     Work,
     Skills,
-    //Projects,
+    Projects,
     //Personal,
 } from "./sections"
 
@@ -19,6 +19,7 @@ const App = () => {
                     <Introduction />
                     <Work />
                     <Skills />
+                    <Projects />
                 </Stack>
                 {/* Footer? */}
             </Container>
