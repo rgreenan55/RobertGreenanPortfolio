@@ -47,7 +47,23 @@ const web_rows : ProjectData = {
 const game_rows : ProjectData = {
     title: 'Game Dev',
     rows: [
-        //{ id: 3, projectName: '-', date: '', link: '', details: '3'},
+        //{ id: 0, projectName: '-', contribution: 'Personal Project', date: '', link: '', details: ''},
+        {
+            id: 4,
+            projectName: 'Breakout',
+            contribution: 'Personal Project',
+            date: '2024-06',
+            link: 'https://github.com/rgreenan55/GodotGames/tree/master/Breakout',
+            details: ''
+        },
+        {
+            id: 3,
+            projectName: 'FlappyBird',
+            contribution: 'Personal Project',
+            date: '2024-06', 
+            link: 'https://github.com/rgreenan55/GodotGames/tree/master/FlappyBird',
+            details: ''
+        },
         { 
             id: 2,
             projectName: 'Pong',
