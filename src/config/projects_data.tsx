@@ -49,6 +49,14 @@ const game_rows : ProjectData = {
     rows: [
         //{ id: 0, projectName: '-', contribution: 'Personal Project', date: '', link: '', details: ''},
         {
+            id: 5, 
+            projectName: 'Early Bird (JetpackJoyride Clone)',
+            contribution: 'Personal Project',
+            date: '2024-07',
+            link: 'https://github.com/rgreenan55/GodotGames/tree/master/JetpackJoyride',
+            details: ''
+        },
+        {
             id: 4,
             projectName: 'Breakout',
             contribution: 'Personal Project',
