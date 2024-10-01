@@ -47,10 +47,27 @@ const web_rows : ProjectData = {
 const game_rows : ProjectData = {
     title: 'Game Dev',
     rows: [
-        //{ id: 0, projectName: '-', contribution: 'Personal Project', date: '', link: '', details: ''},
+        /*
+        {
+            id: 0,
+            projectName: '-',
+            contribution: 'Personal Project',
+            date: '',
+            link: '',
+            details: ''
+        },
+        */
+        {
+            id: 6,
+            projectName: 'The Quest for Everlasting Rejuvenation',
+            contribution: 'GameJam Project',
+            date: '2024-07',
+            link: 'https://github.com/rgreenan55/GameJam15',
+            details: ''
+        },
         {
             id: 5, 
-            projectName: 'Early Bird (JetpackJoyride Clone)',
+            projectName: 'Early Bird / Jetpack Joyride',
             contribution: 'Personal Project',
             date: '2024-07',
             link: 'https://github.com/rgreenan55/GodotGames/tree/master/JetpackJoyride',
