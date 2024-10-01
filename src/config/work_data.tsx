@@ -1,8 +1,8 @@
 export const work_data = [
     {
-        companyName : "UNB | Spatial One | Cosman Benefits & Pension Solutions",
+        companyName : "Spatial One",
         jobTitle : "Contract Software Engineer",
-        workPeriod: "02/24 - 06/24",
+        workPeriod: "02/24 - 09/24",
         description : `
             Developed automated excel readers in C# in order to parse insurance data from various insurance companies.
             
