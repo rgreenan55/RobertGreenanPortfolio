@@ -14,7 +14,7 @@ export const skill_data = [
     {
         title: 'Back End',
         skills: [
-            '...', '....', '.....'
+            'Flask', 'NodeJS', 'SQL'
         ]
     },
     {

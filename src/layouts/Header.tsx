@@ -77,6 +77,7 @@ const Header = () => {
                                             exit={{ opacity: 0 }}
                                             disabled={showMood}
                                             onClick={handleMoodTooltip}
+                                            style={{ borderRadius: '0' }}
                                         >
                                             <Tooltip open={showMood} title={moodIcons[moodIndex].text} arrow>
                                                 {moodIcons[moodIndex].icon}

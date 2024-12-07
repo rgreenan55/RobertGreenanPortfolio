@@ -1,10 +1,11 @@
-import React from 'react';
-import { Box, Paper, Tab, useTheme } from "@mui/material";
-import { TabContext, TabList } from "@mui/lab";
+import React from "react";
 import SectionContainer from "../components/SectionContainer";
 import SectionHeader from "../components/SectionHeader";
+import { Box, Paper, Tab, useTheme } from "@mui/material";
+import { TabContext, TabList } from "@mui/lab";
 import ProjectsTable from "../components/ProjectsTable";
 import { project_tabs } from '../config/projects_data';
+
 
 const Projects = () => {
     const theme = useTheme();
@@ -14,6 +15,9 @@ const Projects = () => {
     return (
         <SectionContainer sectionHeader={<SectionHeader headerTitle="Projects" />} height='80vh' maxHeight='740px'>
             <Paper sx={{ p: '16px', height: '100%' }}>
+                {/* <Masonry columns={4} spacing={2}>
+                    {ProjectData.map(data => <ProjectCard {...data} />)}
+                </Masonry> */}
                 <TabContext value={tab}>
 
                     <Box sx={{ borderBottom: 1, borderColor: textColor, height: '48px' }}>

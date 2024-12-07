@@ -13,20 +13,20 @@ const lightTheme = createTheme({
         MuiCard: {
             defaultProps: {
                 elevation: 10,
-                sx: { border: '1px solid #ffffff' },
+                sx: { border: '1px solid lightgrey' },
             },
         },
         MuiPaper: {
             defaultProps: {
                 elevation: 10,
-                sx: { border: '1px solid #ffffff' },
+                sx: { border: '1px solid lightgrey' },
             }
         },
         MuiIconButton: {
             defaultProps: { 
-                sx: { '> *': { color: '#171717' }}
+                sx: { '> *': { color: '#171717' }, '&:hover': { backgroundColor: 'rgba(120, 120, 120, 0.25)' } }
             }
-        }
+        },
     }
 });
 
@@ -39,7 +39,7 @@ const darkTheme = createTheme({
             default: '#101010',
             paper: '#171717',
         },
-        text: { primary: '#fdfdfd' },
+        text: { primary: '#fdfdfd', secondary: '#bdbdbd' },
     },
     typography: {
         fontFamily: '"Inter"',
@@ -59,7 +59,7 @@ const darkTheme = createTheme({
         },
         MuiIconButton: {
             defaultProps: { 
-                sx: { '> *': { color: '#ffffff' }}
+                sx: { '> *': { color: '#ffffff' }, '&:hover': { backgroundColor: 'rgba(180, 180, 180, 0.25)' }}
             }
         },        
     },

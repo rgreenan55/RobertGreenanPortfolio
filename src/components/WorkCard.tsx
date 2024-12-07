@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, LinkOff } from "@mui/icons-material";
-import { Box, Button, Card, CardContent, Divider, Tooltip, Typography } from "@mui/material";
+import { Box, Button, Card, CardContent, Divider, Tooltip, Typography, useTheme } from "@mui/material";
 
 type Props = {
     companyName : string,
@@ -11,6 +11,7 @@ type Props = {
 }
 
 const WorkCard = ({ companyName, jobTitle, workPeriod, description, companyLink } : Props) => {
+    const theme = useTheme();
     const companyNameRef = React.useRef<HTMLSpanElement>(null);
     const [isOverflowed, setIsOverflowed] = React.useState(false);
 
@@ -36,7 +37,7 @@ const WorkCard = ({ companyName, jobTitle, workPeriod, description, companyLink 
                     <Typography variant='subtitle1'> {jobTitle} </Typography>
                     <Typography variant='subtitle1'> {workPeriod} </Typography>
                 </Box>
-                <Divider sx={{ borderColor: 'black' }} />
+                <Divider sx={{ borderColor: theme.palette.text.primary }} />
             </CardContent>
             <CardContent sx={{ pt: 0, flexGrow: 1, overflowY: 'auto' }}>
                 <Typography whiteSpace='preserve-breaks' fontSize='20px' align='justify'>

@@ -11,6 +11,27 @@ type ProjectDataRow = {
     details : any
 }
 
+export const ProjectData = [
+    {
+        title: "House Price Predictor",
+        date: "2024",
+        imageDir: "HousePricePredictor",
+        images: ["temp.gif"],
+        chips: [],
+        github: "",
+        link: ""
+    },
+    {
+        title: "Portfolio",
+        date: "2024",
+        imageDir: "Portfolio",
+        images: ["temp1.jpg", "temp2.jpg"],
+        chips: [],
+        github: "123",
+        link: "123"
+    }
+]
+
 // TODO: Maybe move this stuff as well as other data to a database? Hosted SQL? Firebase?
 
 const web_rows : ProjectData = {
