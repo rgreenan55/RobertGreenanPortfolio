@@ -1,35 +1,35 @@
 import React from "react";
 import SectionContainer from "../components/SectionContainer";
 import SectionHeader from "../components/SectionHeader";
-import { Box, Paper, Tab, useTheme } from "@mui/material";
-import { TabContext, TabList } from "@mui/lab";
-import ProjectsTable from "../components/ProjectsTable";
-import { project_tabs } from '../config/projects_data';
+import { Box, ImageList, Tab, Tabs, useTheme } from "@mui/material";
+import { ProjectData } from '../config/projects_data';
+import ProjectCard from "../components/ProjectCard";
 
 
 const Projects = () => {
     const theme = useTheme();
     const textColor = theme.palette.primary.contrastText;
-    const [tab, setTab] = React.useState<string>('1');
+    const [tab, setTab] = React.useState<number>(0);
+
 
     return (
         <SectionContainer sectionHeader={<SectionHeader headerTitle="Projects" />} height='80vh' maxHeight='740px'>
-            <Paper sx={{ p: '16px', height: '100%' }}>
-                {/* <Masonry columns={4} spacing={2}>
-                    {ProjectData.map(data => <ProjectCard {...data} />)}
-                </Masonry> */}
-                <TabContext value={tab}>
-
-                    <Box sx={{ borderBottom: 1, borderColor: textColor, height: '48px' }}>
-                        <TabList onChange={(_, newTab) => setTab(newTab)} TabIndicatorProps={{ style: { backgroundColor: textColor }}}>
-                            {project_tabs.map((tab,i) => (<Tab key={tab.title} label={tab.title} value={`${i+1}`} sx={{ color: textColor + ' !important' }} />))}
-                        </TabList>
-                    </Box>
-
-                    {project_tabs.map((tab,i) => <ProjectsTable key={tab.title} value={`${i+1}`} rows={tab.rows} />)}
-
-                </TabContext>
-            </Paper>
+            <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+                <Tabs value={tab} onChange={(_, newTab) => setTab(newTab)} TabIndicatorProps={{ style: { backgroundColor: textColor }}}>
+                    <Tab value={0} label="Web Development" sx={{ color: textColor + ' !important' }} />
+                    <Tab value={1} label="Game Development" sx={{ color: textColor + ' !important' }} />
+                    {/* <Tab value={2} label="Other" sx={{ color: textColor + ' !important' }} /> */}
+                </Tabs>
+            </Box>
+            {Object.values(ProjectData).map((projects, i) => {
+                return (
+                    <div role="tabpanel" hidden={tab !== i}>
+                        <ImageList  cols={3} gap={64}>
+                            {projects.map(project_data => <ProjectCard {...project_data} />)}
+                        </ImageList>
+                    </div>
+                )
+            })}
         </SectionContainer>
     )
 }

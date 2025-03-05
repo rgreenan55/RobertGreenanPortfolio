@@ -4,7 +4,8 @@ import React from "react";
 const lightTheme = createTheme({
     palette: {
         primary: { main: '#ffffff', contrastText: '#171717' },
-        secondary: { main: '#6030b0' },
+        secondary: { main: '#171717'},
+        divider: '#000000',
     },
     typography: {
         fontFamily: '"Inter"',
@@ -33,13 +34,14 @@ const lightTheme = createTheme({
 const darkTheme = createTheme({
     palette: {
         primary: { main: '#171717', contrastText: '#ffffff' },
-        secondary: { main: '#a793cc' },
+        secondary: { main: '#ffffff' },
         error: { main: '#e57373' },
         background: {
             default: '#101010',
             paper: '#171717',
         },
         text: { primary: '#fdfdfd', secondary: '#bdbdbd' },
+        divider: '#ffffff',
     },
     typography: {
         fontFamily: '"Inter"',
@@ -61,7 +63,7 @@ const darkTheme = createTheme({
             defaultProps: { 
                 sx: { '> *': { color: '#ffffff' }, '&:hover': { backgroundColor: 'rgba(180, 180, 180, 0.25)' }}
             }
-        },        
+        },
     },
 })
 

@@ -8,7 +8,7 @@ type Props = {
 const SectionHeader = ({ headerTitle, children } : Props) => {
     return (
         <Box display='flex' sx={{ mb: '16px', justifyContent: 'space-between' }}>
-            <Typography variant='h4' sx={{ textDecoration: 'underline' }}>
+            <Typography variant='h4' sx={{ textDecoration: 'underline', fontWeight: '900' }}>
                 {headerTitle}
             </Typography>
             <Box>

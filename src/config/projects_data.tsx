@@ -1,135 +1,92 @@
-type ProjectData = {
-    title : string,
-    rows : Array<ProjectDataRow>
-}
-type ProjectDataRow = {
-    id: number,
-    projectName : string,
-    contribution : string,
-    date : string,
-    link : string,
-    details : any
-}
-
-export const ProjectData = [
+/*
     {
-        title: "House Price Predictor",
-        date: "2024",
-        imageDir: "HousePricePredictor",
-        images: ["temp.gif"],
+        title: "",
+        date: "",
+        icon: null,
+        description: "",
         chips: [],
+        link: "",
         github: "",
-        link: ""
     },
-    {
-        title: "Portfolio",
-        date: "2024",
-        imageDir: "Portfolio",
-        images: ["temp1.jpg", "temp2.jpg"],
-        chips: [],
-        github: "123",
-        link: "123"
-    }
-]
+*/
 
-// TODO: Maybe move this stuff as well as other data to a database? Hosted SQL? Firebase?
-
-const web_rows : ProjectData = {
-    title: 'Web Dev',
-    rows: [
-        //{ id: 4, projectName: '-', date: '', link: '', details: '4'},
-        { 
-            id: 3,
-            projectName: 'Portfolio',
-            contribution: 'Personal Project',
-            date: '2024-06',
-            link: 'https://github.com/rgreenan55/RobertGreenanPortfolio',
-            details: ''
+export const ProjectData = {
+    "Web Development" : [
+        {
+            title: "House Price Predictor",
+            date: "April 2024",
+            icon: null,
+            description: "Utilized Python and the Scikit-learn package, my Senior Design team modelled and trained and AI that can predict house prices based on the features provided within 16.6% of the actual price point.",
+            chips: ["React", "Typescript", "LeafletJS", "Cypress", "AI", "Python", "Scikit-Learn"],
+            link: "https://github.com/rgreenan55/HousePricePredictor_FE",
+            github: "https://github.com/rgreenan55/HousePricePredictor_BE",
         },
         {
-            id: 2,
-            projectName: 'House Price Predictor',
-            contribution: 'Project Manager, Front End',
-            date: '2023-09',
-            link: 'https://github.com/rgreenan55/HousePricePredictor_FE',
-            details: ''
+            title: "Project Portfolio",
+            date: "In Progress",
+            icon: null,
+            description: "A portfolio webpage for me to display the projects I've been working on as well as my work experience and skills",
+            chips: ["React", "Typescript", "MaterialUI"],
+            link: "https://rgreenan55.github.io/RobertGreenanPortfolio/",
+            github: "https://github.com/rgreenan55/RobertGreenanPortfolio",
         },
         {
-            id: 1,
-            projectName: 'Steam Web App',
-            contribution: 'Personal Project',
-            date: '2021-09',
-            link: 'https://github.com/Steam-Application',
-            details: ''
+            title: "Steam Profile Viewer",
+            date: "September 2021",
+            icon: null,
+            description: "Web application that extracts profile data from the Steam API with a focus on displaying achievement data.",
+            chips: ["React", "MaterialUI", "APIs", "Express", "Axios"],
+            link: "",
+            github: "https://github.com/Steam-Application/SteamApp",
         },
-    ]
-};
-
-const game_rows : ProjectData = {
-    title: 'Game Dev',
-    rows: [
-        /*
+    ],
+    "Game Development": [
         {
-            id: 0,
-            projectName: '-',
-            contribution: 'Personal Project',
-            date: '',
-            link: '',
-            details: ''
-        },
-        */
-        {
-            id: 6,
-            projectName: 'The Quest for Everlasting Rejuvenation',
-            contribution: 'GameJam Project',
-            date: '2024-07',
-            link: 'https://github.com/rgreenan55/GameJam15',
-            details: ''
+            title: "GWJ #78 - Desolation",
+            date: "February 2025",
+            icon: null,
+            description: "",
+            chips: ["Godot", "GDScript", "Algorithms", "Aseprite", "Audacity"],
+            link: "https://boebi-g.itch.io/desolation",
+            github: "https://github.com/rgreenan55/Desolation_GameJam78",
         },
         {
-            id: 5, 
-            projectName: 'Early Bird / Jetpack Joyride',
-            contribution: 'Personal Project',
-            date: '2024-07',
-            link: 'https://github.com/rgreenan55/GodotGames/tree/master/JetpackJoyride',
-            details: ''
+            title: "GWJ #76 - Arctic Office Worker",
+            date: "December 2024",
+            icon: null,
+            description: "",
+            chips: ["Godot", "GDScript", "Algorithms", "Aseprite", "Audacity"],
+            link: "https://boebi-g.itch.io/arctic-office-worker",
+            github: "https://github.com/rgreenan55/ArcticOfficeWorker_GameJam76",
         },
         {
-            id: 4,
-            projectName: 'Breakout',
-            contribution: 'Personal Project',
-            date: '2024-06',
-            link: 'https://github.com/rgreenan55/GodotGames/tree/master/Breakout',
-            details: ''
+            title: "Pirate Jam #15 - QfER",
+            date: "July 2024",
+            icon: null,
+            description: "",
+            chips: ["Godot", "GDScript", "Algorithms", "Aseprite", "Audacity"],
+            link: "https://boebi-g.itch.io/quest-for-everlasting-rejuvenation",
+            github: "https://github.com/rgreenan55/PirateJam15",
         },
         {
-            id: 3,
-            projectName: 'FlappyBird',
-            contribution: 'Personal Project',
-            date: '2024-06', 
-            link: 'https://github.com/rgreenan55/GodotGames/tree/master/FlappyBird',
-            details: ''
-        },
-        { 
-            id: 2,
-            projectName: 'Pong',
-            contribution: 'Personal Project',
-            date: '2024-06',
-            link: 'https://github.com/rgreenan55/GodotGames/tree/master/Pong',
-            details: ''
+            title: "Godot Practice Games",
+            date: "2024",
+            icon: null,
+            description: "A collection of practice games I developed in order to gain an understanding of the engine. Includes Pong, Breakout, Flappy Bird, and more!",
+            chips: ["Godot", "GDScript", "Algorithms", "Aseprite", "Audacity"],
+            link: "https://github.com/rgreenan55/GodotGames",
+            github: "https://github.com/rgreenan55/GodotGames",
         },
         {
-            id: 1,
-            projectName: 'Degree Dungeon',
-            contribution: 'Developer',
-            date: '2024-01',
-            link: 'https://github.com/rgreenan55/DegreeDungeon',
-            details: ''
+            title: "Degree Dungeon",
+            date: "April 2024",
+            icon: null,
+            description: "Project developed for Game Development course, along with some of my classmates.",
+            chips: ["Godot", "GDScript", "Algorithms", "Aseprite", "Audacity"],
+            link: "",
+            github: "",
         },
-    ]
-};
-
-export const project_tabs = [
-    web_rows,
-    game_rows
-];
+    ],
+    // "Other": [
+    // ]
+}

@@ -50,7 +50,7 @@ const WorkCard = ({ companyName, jobTitle, workPeriod, description, companyLink 
                     sx={{ width: '100%', p: '16px', textTransform: 'capitalize' }}
                     color={companyLink ? "secondary" : "error"}
                     startIcon={companyLink ? <Link /> : <LinkOff />}
-                    onClick={companyLink ? () =>  window.open(companyLink, '_blank') : () => null}
+                    onClick={companyLink ? () => window.open(companyLink, '_blank') : () => null}
                 >
                     {companyLink ? "Company Webpage" : "No Link" }
                 </Button>
